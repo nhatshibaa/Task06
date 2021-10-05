@@ -13,11 +13,11 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
-using Task06_U41.Models;
+using Task06_U42.Models;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
-namespace Task06_U41
+namespace Task06_U42
 {
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -25,7 +25,7 @@ namespace Task06_U41
     public sealed partial class MainPage : Page
     {
         private List<Icon> Icons;
-        //private List<Contact> Contacts;
+
         private ObservableCollection<Contact> Contacts;
 
         public MainPage()
@@ -40,8 +40,9 @@ namespace Task06_U41
             Icons.Add(new Icon { IconPath = "Assets/female-02.png" });
             Icons.Add(new Icon { IconPath = "Assets/female-03.png" });
 
-            //Contacts = new List<Contact>();
             Contacts = new ObservableCollection<Contact>();
+
+            //Contacts.Add(new Contact { FirstName = "Bob", LastName = "Tabor", AvatarPath = "Assets/male-03.png" });
         }
 
         private void NewContactButton_Click(object sender, RoutedEventArgs e)
