@@ -6,6 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
+    xmlns:data="using:Task06_U42.Models"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
@@ -54,11 +55,11 @@
                       Grid.Column="1" 
                       ItemsSource="{x:Bind Icons}" 
                       Margin="10">
-                <!--<ComboBox.ItemTemplate>
+                <ComboBox.ItemTemplate>
                     <DataTemplate x:DataType="data:Icon">
                         <Image Source="{x:Bind IconPath}" Width="40" Height="40" />
                     </DataTemplate>
-                </ComboBox.ItemTemplate>-->
+                </ComboBox.ItemTemplate>
             </ComboBox>
 
             <Button Grid.Row="3" 
@@ -73,13 +74,13 @@
             Grid.Row="2" 
             ItemsSource="{x:Bind Contacts}" 
             Margin="20">
-            <!--<GridView.ItemTemplate>
-                --><!--<DataTemplate x:DataType="data:Contact">
+            <GridView.ItemTemplate>
+                <DataTemplate x:DataType="data:Contact">
                     <local:ContactTemplate 
                         HorizontalAlignment="Stretch" 
                         VerticalAlignment="Stretch" />
-                </DataTemplate>--><!--
-            </GridView.ItemTemplate>-->
+                </DataTemplate>
+            </GridView.ItemTemplate>
         </GridView>
     </Grid>
 </Page>
